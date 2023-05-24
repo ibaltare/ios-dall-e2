@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		373A35322A1D93FF00773136 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A35312A1D93FF00773136 /* AppEntry.swift */; };
-		373A35342A1D93FF00773136 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A35332A1D93FF00773136 /* ContentView.swift */; };
+		373A35342A1D93FF00773136 /* DALLEImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A35332A1D93FF00773136 /* DALLEImagesView.swift */; };
 		373A35362A1D940200773136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373A35352A1D940200773136 /* Assets.xcassets */; };
 		373A35392A1D940200773136 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373A35382A1D940200773136 /* Preview Assets.xcassets */; };
 		373A35402A1D950800773136 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373A353F2A1D950800773136 /* Launch Screen.storyboard */; };
 		373A35442A1D9DBD00773136 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A35432A1D9DBD00773136 /* Models.swift */; };
 		373A35462A1DA21A00773136 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A35452A1DA21A00773136 /* APIService.swift */; };
+		373A354B2A1DB4EF00773136 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A354A2A1DB4EF00773136 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		373A352E2A1D93FF00773136 /* ArtGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373A35312A1D93FF00773136 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
-		373A35332A1D93FF00773136 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		373A35332A1D93FF00773136 /* DALLEImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DALLEImagesView.swift; sourceTree = "<group>"; };
 		373A35352A1D940200773136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373A35382A1D940200773136 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		373A353F2A1D950800773136 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -27,6 +28,7 @@
 		373A35422A1D969900773136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		373A35432A1D9DBD00773136 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		373A35452A1DA21A00773136 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		373A354A2A1DB4EF00773136 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +61,15 @@
 		373A35302A1D93FF00773136 /* ArtGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				373A35422A1D969900773136 /* Info.plist */,
 				373A35312A1D93FF00773136 /* AppEntry.swift */,
-				373A35332A1D93FF00773136 /* ContentView.swift */,
-				373A35352A1D940200773136 /* Assets.xcassets */,
-				373A35372A1D940200773136 /* Preview Content */,
-				373A353F2A1D950800773136 /* Launch Screen.storyboard */,
-				373A35412A1D95C900773136 /* Config.xcconfig */,
-				373A35432A1D9DBD00773136 /* Models.swift */,
+				373A35472A1DB07100773136 /* Screens */,
+				373A35482A1DB08E00773136 /* Models */,
 				373A35452A1DA21A00773136 /* APIService.swift */,
+				373A35352A1D940200773136 /* Assets.xcassets */,
+				373A353F2A1D950800773136 /* Launch Screen.storyboard */,
+				373A35422A1D969900773136 /* Info.plist */,
+				373A35412A1D95C900773136 /* Config.xcconfig */,
+				373A35372A1D940200773136 /* Preview Content */,
 			);
 			path = ArtGenerator;
 			sourceTree = "<group>";
@@ -78,6 +80,31 @@
 				373A35382A1D940200773136 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		373A35472A1DB07100773136 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				373A35492A1DB0D300773136 /* DALLEImages */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		373A35482A1DB08E00773136 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				373A35432A1D9DBD00773136 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		373A35492A1DB0D300773136 /* DALLEImages */ = {
+			isa = PBXGroup;
+			children = (
+				373A35332A1D93FF00773136 /* DALLEImagesView.swift */,
+				373A354A2A1DB4EF00773136 /* ViewModel.swift */,
+			);
+			path = DALLEImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +178,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373A354B2A1DB4EF00773136 /* ViewModel.swift in Sources */,
 				373A35442A1D9DBD00773136 /* Models.swift in Sources */,
-				373A35342A1D93FF00773136 /* ContentView.swift in Sources */,
+				373A35342A1D93FF00773136 /* DALLEImagesView.swift in Sources */,
 				373A35462A1DA21A00773136 /* APIService.swift in Sources */,
 				373A35322A1D93FF00773136 /* AppEntry.swift in Sources */,
 			);
@@ -291,6 +319,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,6 +349,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
