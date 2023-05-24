@@ -21,6 +21,9 @@ struct DALLEImagesView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 80, height: 80)
+                                    .onTapGesture {
+                                        vm.selectedImage = uiImage
+                                    }
                             } else {
                                 ProgressView()
                                     .frame(width: 80, height: 80)
@@ -29,6 +32,15 @@ struct DALLEImagesView: View {
                     }
                 }
                 if !vm.fetching {
+                    if !vm.urls.isEmpty {
+                        Text("Select an image")
+                    }
+                    if let selectedImage = vm.selectedImage {
+                        Image(uiImage: selectedImage)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 256, height: 256)
+                    }
                     if vm.urls.isEmpty {
                         Text("The more descriptive you can be, the better")
                         TextField("Image description", text: $vm.prompt, axis: .vertical)
