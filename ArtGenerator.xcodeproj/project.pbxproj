@@ -12,6 +12,8 @@
 		373A35362A1D940200773136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373A35352A1D940200773136 /* Assets.xcassets */; };
 		373A35392A1D940200773136 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373A35382A1D940200773136 /* Preview Assets.xcassets */; };
 		373A35402A1D950800773136 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373A353F2A1D950800773136 /* Launch Screen.storyboard */; };
+		373A35442A1D9DBD00773136 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A35432A1D9DBD00773136 /* Models.swift */; };
+		373A35462A1DA21A00773136 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A35452A1DA21A00773136 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		373A353F2A1D950800773136 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		373A35412A1D95C900773136 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		373A35422A1D969900773136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		373A35432A1D9DBD00773136 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		373A35452A1DA21A00773136 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				373A35372A1D940200773136 /* Preview Content */,
 				373A353F2A1D950800773136 /* Launch Screen.storyboard */,
 				373A35412A1D95C900773136 /* Config.xcconfig */,
+				373A35432A1D9DBD00773136 /* Models.swift */,
+				373A35452A1DA21A00773136 /* APIService.swift */,
 			);
 			path = ArtGenerator;
 			sourceTree = "<group>";
@@ -145,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373A35442A1D9DBD00773136 /* Models.swift in Sources */,
 				373A35342A1D93FF00773136 /* ContentView.swift in Sources */,
+				373A35462A1DA21A00773136 /* APIService.swift in Sources */,
 				373A35322A1D93FF00773136 /* AppEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
