@@ -19,6 +19,8 @@ class ViewModel: ObservableObject {
     @Published var imageMedium = ImageMedium.none
     @Published var artist = Artist.none
     
+    @Published var showAlert = false
+    
     var description: String {
         let characteristics = imageStyle.description + imageMedium.description + artist.description
         return prompt + (!characteristics.isEmpty ? "\n- " + characteristics : "")
@@ -57,6 +59,40 @@ class ViewModel: ObservableObject {
             if let data = generationInput.encodedData {
                 do {
                     let response = try await apiService.fetchImages(with: data)
+                    for data in response.data {
+                        urls.append(data.url)
+                    }
+                    withAnimation {
+                        fetching.toggle()
+                    }
+                    for (index, url) in urls.enumerated() {
+                        dalleImages[index].uiImage = await apiService.loadImage(at: url)
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                    fetching.toggle()
+                    showAlert.toggle()
+                }
+            }
+        }
+    }
+    
+    func fetchVariations() {
+        if let selectedImage {
+            fetching.toggle()
+            guard let imageData = selectedImage.pngData() else {
+                return
+            }
+            clearProperties()
+            Task {
+                do {
+                    let formdataFields: [String : Any] = ["n" : Constants.n,
+                                                          "size": Constants.imageSize]
+                    let response = try await apiService.getVariations(formDataField: formdataFields,
+                                                                      fieldName: "image",
+                                                                      fileName: "Selected Image",
+                                                                      fileData: imageData)
+                    
                     for data in response.data {
                         urls.append(data.url)
                     }
